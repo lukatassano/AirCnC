@@ -29,3 +29,44 @@ ul.spot-list li span {
   font-size: 15px;
   color: #999;
 }
+
+ul.spot-list li button {
+  height: 25px;
+  width: 25px;
+  margin-top: 90px;
+  margin-left: 150px;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #E55E5E;
+  background-color: rgba(255, 255, 255, 0.329);
+  border: 0;
+  cursor: pointer;
+}
+
+ul.notifications {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+ul.notifications li {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+ul.notifications li button {
+  margin-right: 20px;
+  border: 0;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+ul.notifications li button.accept {
+  color: #84C870;
+  background-color: rgb(255, 255, 255);
+}
+
+ul.notifications li button.reject {
+  color: #E55E5E;
+  background-color: rgb(255, 255, 255);
+}
