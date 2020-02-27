@@ -16,7 +16,7 @@ module.exports = {
     const { company, techs, price } = req.body;
     const { user_id } = req.headers;
 
-    const user= await User.findById(user_id);
+    const user = await User.findById(user_id);
 
     if (!user) {
       return res.status(400).json({ error: 'user does not exists' });
@@ -31,5 +31,18 @@ module.exports = {
     })
 
     return res.json(spot)
+  },
+
+  async destroy(req, res) {
+    const { id } = req.params;
+
+    await Spot.findOneAndRemove({_id: id}), (err) => {
+      if(err) {
+        console.log(err);
+        return res.status(500).json({ error: "erro"});
+      }
+    }
+
+    return res.json({ message: "ok"});
   }
 };
