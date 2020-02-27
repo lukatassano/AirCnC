@@ -28,11 +28,11 @@ export default function Book({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.label}>DATA DE INTERESSE *</Text>
-      <TextInput 
+      <TextInput
         style={styles.input}
         placeholder="Qual data você quer reservar?"
         placeholderTextColor="#999"
-        autoCapitalize="words"
+        autoCapitalize="none"
         autoCorrect={false}
         value={date}
         onChangeText={setDate}

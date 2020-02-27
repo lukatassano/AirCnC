@@ -23,7 +23,7 @@ function SpotList({ tech, navigation }) {
     navigation.navigate('Book', { id })
   }
 
-
+  
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Empresas que usam <Text style={styles.bold}>{tech}</Text></Text>
@@ -51,7 +51,8 @@ function SpotList({ tech, navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 30,
+    marginTop: 15,
+    marginBottom: 15
   },
 
   title: {
@@ -70,14 +71,14 @@ const styles = StyleSheet.create({
   },
 
   listItem: {
-    marginRight: 15,
+    marginRight: 25,
   },
 
   thumbnail: {
     width: 200,
     height: 120,
     resizeMode: 'cover',
-    borderRadius: 3,
+    borderRadius: 5,
   },
 
   company: {
@@ -98,7 +99,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f05a5b',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 3,
+    borderRadius: 5,
     marginTop: 15
   },
   buttonText: {
