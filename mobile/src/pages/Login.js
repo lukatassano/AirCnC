@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, AsyncStorage,KeyboardAvoidingView,Text, Image, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { View, AsyncStorage,KeyboardAvoidingView,Text, Image, StyleSheet, TextInput, TouchableOpacity, Animated } from 'react-native';
 
 import api from "../services/api";
 
@@ -8,6 +8,25 @@ import logo from '../assets/logo.png';
 export default function Login({ navigation }) {
   const [email, setEmail] = useState('');
   const [techs, setTechs] = useState('');
+
+  const [offset] = useState(new Animated.ValueXY({x: 500, y:0}));
+  const [logoset] = useState(new Animated.ValueXY({x: 0, y:-50}));
+
+  useEffect(() => {
+    Animated.spring(offset.x, {
+      toValue: 0,
+      speed: 3,
+      bounciness: 0
+    }).start();
+  }, []);
+
+  useEffect(() => {
+    Animated.spring(logoset.y, {
+      toValue: 0,
+      speed: 1,
+      bounciness: 20
+    }).start();
+  }, []);
 
   useEffect(() => {
     AsyncStorage.getItem('user').then(user => {
@@ -31,10 +50,26 @@ export default function Login({ navigation }) {
   }
 
 
-  return <KeyboardAvoidingView behavior="padding" style={styles.container}>
-    <Image source={logo}/>
+  return <KeyboardAvoidingView behavior="padding" style={styles.container} >
+    <Animated.View style={[
+      {
+        transform: [
+          {translateY: logoset.y}
+        ]
+      }
+    ]}>
+      <Image source={logo} />
+    </Animated.View>
 
-    <View style={styles.form}>
+    <Animated.View style={[
+      styles.form,
+      {
+        transform: [
+          {translateX: offset.x}
+        ]
+      }
+      ]}
+    >
       <Text style={styles.label}>SEU E-MAIL *</Text>
       <TextInput 
         style={styles.input}
@@ -45,7 +80,7 @@ export default function Login({ navigation }) {
         autoCorrect={false}
         value={email}
         onChangeText={setEmail}
-      />
+      />  
 
       <Text style={styles.label}>TECNOLOGIAS *</Text>
       <TextInput 
@@ -62,7 +97,7 @@ export default function Login({ navigation }) {
         <Text style={styles.buttonText}>Encontrar spots</Text>
       </TouchableOpacity>
 
-    </View>
+    </Animated.View>
   </KeyboardAvoidingView>
 }
 
