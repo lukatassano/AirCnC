@@ -1,10 +1,12 @@
 # AirCnC
 
 <p align="center" >
-<img height="300" src="./assets/screenshotWeb.png" />
-<img height="300" src="./assets/screenshotApp.png" />
-<img height="300" src="./assets/ScreenshotAndroid.png" />
-<img height="300" src="./assets/frontWeb.png" />
-<img height="240" src="./assets/Timeline1.gif" />
+<img width="600" src="./assets/frontWeb.png" />
+</p>
+<p align="center">
+<img width="230" src="./assets/AircncMobile.gif" />
+<img width="200" src="./assets/screenshotApp.png" />
+<img width="200" src="./assets/ScreenshotAndroid.png" />
+<img width="600" src="./assets/AircncWeb.gif" />
 </p>
 
