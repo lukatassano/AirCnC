@@ -4,7 +4,7 @@
 
 # Ofereça spots para programadores e encontre talentos para sua empresa
 
-## tecnologias usadas
+### tecnologias usadas:
 ### Node.js
 - Express
 - Mongoose
