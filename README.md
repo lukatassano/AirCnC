@@ -4,7 +4,8 @@
 
 # Ofereça spots para programadores e encontre talentos para sua empresa
 
-### tecnologias usadas:
+### projeto realizado na semana Omnistack 9.0 da Rocketseat
+## tecnologias usadas:
 ### Node.js
 - Express
 - Mongoose
@@ -19,6 +20,10 @@
 - Axios
 - React navigation
 - Socket.io client
+
+## Modificações:
+- Adicionei animações no app mobile
+- Botão para excluir spot na aplicação web
 
 <p align="center" >
   <img width="100%" src="./assets/frontWeb.png" />
