@@ -22,7 +22,7 @@
 - Socket.io client
 
 ## Modificações:
-- Adicionei animações no app mobile
+- Animações no app mobile
 - Botão para excluir spot na aplicação web
 
 <p align="center" >
