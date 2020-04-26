@@ -10,12 +10,12 @@ export default function Login({ navigation }) {
   const [techs, setTechs] = useState('');
 
   const [offset] = useState(new Animated.ValueXY({x: 500, y:0}));
-  const [logoset] = useState(new Animated.ValueXY({x: 0, y:-50}));
+  const [logoset] = useState(new Animated.ValueXY({x: 0, y:-500}));
 
   useEffect(() => {
     Animated.spring(offset.x, {
       toValue: 0,
-      speed: 3,
+      speed: 2,
       bounciness: 0
     }).start();
   }, []);
@@ -23,8 +23,8 @@ export default function Login({ navigation }) {
   useEffect(() => {
     Animated.spring(logoset.y, {
       toValue: 0,
-      speed: 1,
-      bounciness: 20
+      speed: 2,
+      bounciness: 0,
     }).start();
   }, []);
 
